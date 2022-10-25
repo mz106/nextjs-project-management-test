@@ -28,7 +28,7 @@ const GoalItemContainer = (props: Props) => {
         }
        
         console.log("username: ", context.user.username)
-        const res = await fetch('http://localhost:3000/api/goals', {
+        const res = await fetch(`${process.env.URL}/api/goals`, {
           method: 'PATCH',
           body: JSON.stringify({
             username: context.user.username,
