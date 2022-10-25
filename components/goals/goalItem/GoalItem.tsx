@@ -31,7 +31,7 @@ const GoalItem = ({ item }: Props) => {
 
   const addTodoToDb = async () => {
     
-    const res = await fetch(`${process.env.URL_STRING}/api/goals`, {
+    const res = await fetch(`/api/goals`, {
       method: 'PATCH',
       body: JSON.stringify({
         username: context.user.username,
