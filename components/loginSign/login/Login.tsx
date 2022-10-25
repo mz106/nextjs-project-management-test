@@ -56,7 +56,7 @@ const fetchUser = async (e: React.FormEvent<HTMLFormElement>) => {
         password: password,
     })
     
-    const res = await fetch(`${process.env.URL_STRING}/api/user`, {
+    const res = await fetch(`/api/user`, {
         method: 'POST',
         body: body,
     })
@@ -77,7 +77,7 @@ const fetchUser = async (e: React.FormEvent<HTMLFormElement>) => {
         isAdd: 'true',
     })
     console.log('addUserToDb body: ', body)
-    const res = await fetch(`${process.env.URL_STRING}/api/user`, {
+    const res = await fetch(`/api/user`, {
         method: 'POST',
         body: body,
     })
