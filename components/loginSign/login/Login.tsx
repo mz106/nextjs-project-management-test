@@ -56,7 +56,7 @@ const fetchUser = async (e: React.FormEvent<HTMLFormElement>) => {
         password: password,
     })
     
-    const res = await fetch(`http://localhost:3000/api/user`, {
+    const res = await fetch(`${process.env.URL_STRING}/api/user`, {
         method: 'POST',
         body: body,
     })
